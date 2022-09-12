@@ -1,0 +1,24 @@
+{
+  "name": "wordgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wordGen.js",
+  "scripts": {
+    "start": "node wordGen.js",
+    "tsc": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckinha45/WordGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luckinha45/WordGenerator/issues"
+  },
+  "homepage": "https://github.com/luckinha45/WordGenerator#readme",
+  "dependencies": {
+    "typescript": "^4.8.3"
+  }
+}

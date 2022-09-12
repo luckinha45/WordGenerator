@@ -2,7 +2,7 @@ const consonants: string = 'bcdefghjklmnpqrstvwxz';
 const vowels: string = 'aeiouy';
 const vowAccents: string = 'áéíýóúàâêîôû';
 
-function sleep(ms) {
+function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -10,7 +10,7 @@ function randomInt(min: number, max:number): number {
     return Math.floor(Math.random() * (max-min+1)) + min;
 }
 
-function genChance(prob): boolean {
+function genChance(prob: number): boolean {
     return (Math.random() <= prob) ? true : false;
 }
 
@@ -23,8 +23,15 @@ function formSyllable(): string {
     if(!genChance(0.1)) {
         con = consonants[randomInt(0, consonants.length-1)];
         notCons = false;
+
+        // adiciona um 'h' entra a consonante e a vogal
+        if(genChance(0.2)) {
+            con += 'h'
+        }
     }
+
     
+    // Entra caso tenha chance ou uma consoante nn tenha cido gerada
     if(!genChance(0.1) || notCons) {
 
         // chance de ter acento na vogal
