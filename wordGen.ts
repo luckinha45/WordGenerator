@@ -1,4 +1,4 @@
-const consonants: string = 'bcdefghjklmnpqrstvwxz';
+const consonants: string = 'bcdefghjklmnpqrstvwxz\'';
 const vowels: string = 'aeiouy';
 const vowAccents: string = 'áéíýóúàâêîôû';
 
@@ -60,9 +60,6 @@ async function genNome() {
     while(true) {
         let name: Array<string> = [];
         let nSylls: number;
-
-        // let nSylls = randomInt(2, 5);
-        // name.push(formWord(nSylls));
     
         nSylls = randomInt(2, 5);
         name.push(formWord(nSylls));
